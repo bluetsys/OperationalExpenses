@@ -141,13 +141,32 @@ if (($_GET['export'] ?? '') === 'csv' && !$errors) {
 <html lang="ko">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E10YHPJ1VJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-E10YHPJ1VJ');
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>서울시 본청 업무추진비 분석 리포트</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .github-fork-ribbon.fixed:before {
+            background-color: #333 !important;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
 </head>
 
 <body>
+    <a target="_blank" class="github-fork-ribbon fixed" href="https://github.com/bluetsys/OperationalExpenses" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
     <main class="wrap">
         <h1>서울시 본청 업무추진비 분석 리포트</h1>
         <p class="sub">CSV 원본 자동 분석 · 가장 많이 이용한 장소 / 가장 많이 지출한 장소 / 부서별 지출 / 월별 추이</p>
@@ -245,6 +264,26 @@ if (($_GET['export'] ?? '') === 'csv' && !$errors) {
         </section>
         <footer>데이터 출처: <a href="https://data.seoul.go.kr/dataList/OA-22156/S/1/datasetView.do" target="_blank" rel="noopener noreferrer">서울 열린데이터광장 · 서울시 본청 업무추진비 목록</a> · <?= h(basename($dbFile)) ?> 기준 원본 <?= num($totalRows) ?>건. 장소별 이용 횟수는 방문 횟수가 아닌 집행 기록 건수입니다. 주소가 뒤에 붙은 가맹점명은 주소 부분을 제거하여 집계합니다. 상호명 변형 및 지점명은 별도 장소로 처리하며, 내부 시설 판별은 명칭 기반입니다.</footer>
     </main>
+    <script type="text/javascript">
+        var sc_project = 13139524;
+        var sc_invisible = 1;
+        var sc_security = "83232f9f";
+    </script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript>
+        <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+                    class="statcounter" src="https://c.statcounter.com/13139524/0/83232f9f/1/" alt="Web Analytics"
+                    referrerPolicy="no-referrer-when-downgrade"></a></div>
+    </noscript>
+    <!-- End of Statcounter Code -->
+    <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+    <script type="text/javascript">
+        if (!wcs_add) var wcs_add = {};
+        wcs_add["wa"] = "14cd277c95fd60";
+        if (window.wcs) {
+            wcs_do();
+        }
+    </script>
 </body>
 
 </html>
